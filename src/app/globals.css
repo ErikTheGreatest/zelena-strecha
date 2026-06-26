@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F7F3EC; }
+::-webkit-scrollbar-thumb { background: #7A9E5F; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2D5016; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #F7F3EC;
+  color: #1C1C1C;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .heading-serif {
+    @apply font-serif font-bold tracking-tight;
+  }
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-widest;
+    color: #7A9E5F;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 active:scale-95;
+    background-color: #C46B3F;
+    color: white;
+  }
+  .btn-primary:hover { background-color: #a85530; }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 active:scale-95;
+    border: 2px solid #2D5016;
+    color: #2D5016;
+  }
+  .btn-outline:hover { background-color: #2D5016; color: white; }
+
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 active:scale-95;
+    border: 2px solid white;
+    color: white;
+  }
+  .btn-outline-white:hover { background-color: white; color: #2D5016; }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+  .section-padding {
+    @apply px-4 sm:px-8 lg:px-16 py-20;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+.leaf-divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #7A9E5F, #2D5016);
+  border-radius: 2px;
+  margin: 1rem 0;
+}
